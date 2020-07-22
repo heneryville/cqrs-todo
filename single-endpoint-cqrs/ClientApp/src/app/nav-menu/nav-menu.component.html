@@ -1,0 +1,15 @@
+<header class="header">
+
+  <span *ngIf="!connState.isOnline" style="color: red; font-weight: 800">
+    Offline
+  </span>
+
+  <span *ngIf="connState.isOnline">
+    Online
+  </span>
+
+  <button (click)="toggle()"> {{ connState.isOnline ? 'Go Offline' : 'Go Online' }}</button>
+
+  Stored commands: {{ cmdBuffer.commands.length }}
+
+</header>
